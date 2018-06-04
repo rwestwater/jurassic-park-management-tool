@@ -22,4 +22,7 @@ public abstract class Dinosaur {
         return name;
     }
 
+    public DinosaurType getDinosaurType() {
+        return dinosaurType;
+    }
 }

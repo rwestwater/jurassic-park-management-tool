@@ -21,4 +21,9 @@ public class DinosaurTest {
     public void canGetName(){
         assertEquals("Velociraptor", velociraptor.getName());
     }
+
+    @Test
+    public void hasDinosaurType(){
+        assertEquals(DinosaurType.CARNIVORE, velociraptor.getDinosaurType());
+    }
 }
