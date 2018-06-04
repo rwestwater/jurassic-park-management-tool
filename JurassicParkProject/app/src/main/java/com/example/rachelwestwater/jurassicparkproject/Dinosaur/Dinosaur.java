@@ -11,7 +11,7 @@ public abstract class Dinosaur {
     private ArrayList<Food> stomachContents;
 
 
-    public Dinosaur(String name, DinosaurType dinosaurType, ){
+    public Dinosaur(String name, DinosaurType dinosaurType){
         this.name = name;
         this.dinosaurType = dinosaurType;
         this.stomachContents = new ArrayList<>();
