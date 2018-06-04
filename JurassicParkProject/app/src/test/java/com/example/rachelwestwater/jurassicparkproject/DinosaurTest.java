@@ -26,4 +26,9 @@ public class DinosaurTest {
     public void hasDinosaurType(){
         assertEquals(DinosaurType.CARNIVORE, velociraptor.getDinosaurType());
     }
+
+    @Test
+    public void hasEmptyStomach(){
+        assertEquals(0, velociraptor.stomachContentsCount());
+    }
 }

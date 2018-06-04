@@ -25,4 +25,8 @@ public abstract class Dinosaur {
     public DinosaurType getDinosaurType() {
         return dinosaurType;
     }
+
+    public int stomachContentsCount(){
+        return this.stomachContents.size();
+    }
 }
