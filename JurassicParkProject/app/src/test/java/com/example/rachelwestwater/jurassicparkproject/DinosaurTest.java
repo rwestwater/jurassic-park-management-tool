@@ -1,17 +1,17 @@
 package com.example.rachelwestwater.jurassicparkproject;
 
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Dinosaur;
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
 
 import org.junit.Before;
 
 public class DinosaurTest {
 
-    Dinosaur dinosaur1;
-    Dinosaur dinosaur2;
+    Velociraptor Velociraptor;
 
     @Before
     public void before(){
-        dinosaur1 = new Dinosaur("") {
-        ride2 = new Ride("Teacups", "Spinner", 2, 80);
+        Velociraptor = new Velociraptor("Velociraptor", DinosaurType.HERBIVORE);
     }
 }
