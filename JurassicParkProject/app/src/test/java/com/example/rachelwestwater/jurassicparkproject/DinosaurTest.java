@@ -4,6 +4,7 @@ import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
 
 import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,6 +17,7 @@ public class DinosaurTest {
         velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE);
     }
 
+    @Test
     public void canGetName(){
         assertEquals("Velociraptor", velociraptor.getName());
     }

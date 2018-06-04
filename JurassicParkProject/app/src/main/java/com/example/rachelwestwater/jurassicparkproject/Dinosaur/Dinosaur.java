@@ -17,4 +17,9 @@ public abstract class Dinosaur {
         this.stomachContents = new ArrayList<>();
     }
 
+
+    public String getName() {
+        return name;
+    }
+
 }
