@@ -11,7 +11,7 @@ public abstract class Dinosaur {
     private ArrayList<Food> stomachContents;
 
 
-    public Dinosaur(String name, DinosaurType dinosaurType){
+    public Dinosaur(String name, DinosaurType dinosaurType) {
         this.name = name;
         this.dinosaurType = dinosaurType;
         this.stomachContents = new ArrayList<>();
@@ -26,7 +26,16 @@ public abstract class Dinosaur {
         return dinosaurType;
     }
 
-    public int stomachContentsCount(){
+    public int stomachContentsCount() {
         return this.stomachContents.size();
+    }
+
+    public void eat(Food food) {
+        stomachContents.add(food);
+
+    }
+
+    public ArrayList<Food> getStomachContents() {
+        return stomachContents;
     }
 }

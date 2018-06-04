@@ -3,6 +3,10 @@ package com.example.rachelwestwater.jurassicparkproject;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
+import com.example.rachelwestwater.jurassicparkproject.Food.Ferns;
+import com.example.rachelwestwater.jurassicparkproject.Food.Food;
+import com.example.rachelwestwater.jurassicparkproject.Food.FoodType;
+import com.example.rachelwestwater.jurassicparkproject.Food.Meats;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,11 +17,15 @@ public class DinosaurTest {
 
     Velociraptor velociraptor;
     Brontosaurus brontosaurus;
+    Ferns ferns;
+    Meats meats;
 
     @Before
     public void before(){
         velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE);
         brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE);
+        ferns = new Ferns("Ferns", FoodType.VEGETARIAN);
+        meats = new Meats("Lizard", FoodType.MEATS);
     }
 
     @Test
@@ -36,5 +44,11 @@ public class DinosaurTest {
     public void hasEmptyStomach(){
         assertEquals(0, velociraptor.stomachContentsCount());
         assertEquals(0, brontosaurus.stomachContentsCount());
+    }
+
+    @Test
+    public void canCountStomachContents(){
+        velociraptor.eat(meats);
+        assertEquals(1, velociraptor.stomachContentsCount());
     }
 }
