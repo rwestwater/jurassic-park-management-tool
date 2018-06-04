@@ -1,17 +1,22 @@
 package com.example.rachelwestwater.jurassicparkproject;
 
-import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Dinosaur;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
 
 import org.junit.Before;
 
+import static org.junit.Assert.assertEquals;
+
 public class DinosaurTest {
 
-    Velociraptor Velociraptor;
+    Velociraptor velociraptor;
 
     @Before
     public void before(){
-        Velociraptor = new Velociraptor("Velociraptor", DinosaurType.HERBIVORE);
+        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE);
+    }
+
+    public void canGetName(){
+        assertEquals("Velociraptor", velociraptor.getName());
     }
 }

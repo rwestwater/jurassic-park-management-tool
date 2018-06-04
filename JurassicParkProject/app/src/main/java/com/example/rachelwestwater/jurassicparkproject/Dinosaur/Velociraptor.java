@@ -6,4 +6,7 @@ public class Velociraptor {
         super(name, dinosaurType);
     }
 
+    public String getName() {
+        return name;
+    }
 }
