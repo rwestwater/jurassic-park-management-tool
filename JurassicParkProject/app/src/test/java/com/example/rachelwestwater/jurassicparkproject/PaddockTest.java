@@ -66,7 +66,11 @@ public class PaddockTest {
     public void moveDinosaurPaddocks() {
         herbivorePaddock2.addDinosaur(brontosaurus);
         herbivorePaddock2.transferDinosaur(brontosaurus, herbivorePaddock1);
+        carnivorePaddock1.addDinosaur(velociraptor);
+        carnivorePaddock1.transferDinosaur(velociraptor, carnivorePaddock2);
         assertEquals(1, herbivorePaddock1.dinosaurCount());
         assertEquals(0, herbivorePaddock2.dinosaurCount());
+        assertEquals(0, carnivorePaddock1.dinosaurCount());
+        assertEquals(1, carnivorePaddock2.dinosaurCount());
     }
 }

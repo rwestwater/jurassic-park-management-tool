@@ -5,11 +5,11 @@ import com.example.rachelwestwater.jurassicparkproject.Paddock.HerbivorePaddock;
 
 import java.util.ArrayList;
 
-public abstract class Dinosaur {
+public abstract class Dinosaur implements IEat {
 
     private String name;
     private DinosaurType dinosaurType;
-    private ArrayList<Food> stomachContents;
+    private ArrayList<IEat> stomachContents;
 
 
     public Dinosaur(String name, DinosaurType dinosaurType) {
@@ -31,11 +31,11 @@ public abstract class Dinosaur {
         return this.stomachContents.size();
     }
 
-    public void eat(Food food) {
-        stomachContents.add(food);
+    public void eat(IEat iEat) {
+        stomachContents.add(iEat);
     }
 
-    public ArrayList<Food> getStomachContents() {
+    public ArrayList<IEat> getStomachContents() {
         return stomachContents;
     }
 

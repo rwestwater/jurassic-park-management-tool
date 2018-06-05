@@ -1,6 +1,8 @@
 package com.example.rachelwestwater.jurassicparkproject.Food;
 
-public abstract class Food {
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.IEat;
+
+public abstract class Food implements IEat {
 
     private String name;
     private FoodType foodType;

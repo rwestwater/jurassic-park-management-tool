@@ -10,4 +10,11 @@ public class CarnivorePaddock extends Paddock {
     public void addDinosaur(Velociraptor velociraptor) {
          dinosaurs.add(velociraptor);
     }
+
+    public void transferDinosaur(Velociraptor velociraptor, CarnivorePaddock destination) {
+        boolean successful = dinosaurs.remove(velociraptor);
+        if (successful) {
+            destination.addDinosaur(velociraptor);
+        }
+    }
 }
