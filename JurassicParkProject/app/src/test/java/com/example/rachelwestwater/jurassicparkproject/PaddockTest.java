@@ -42,16 +42,12 @@ public class PaddockTest {
         @Test
         public void addDinosaurToPaddock(){
             carnivorePaddock1.addDinosaur(velociraptor);
+            herbivorePaddock1.addDinosaur(brontosaurus);
             assertEquals(1, carnivorePaddock1.dinosaurCount());
+            assertEquals(1, herbivorePaddock1.dinosaurCount());
+
         }
 
-
-
-//        @Test
-//        public void getPaddockDinosaur(){
-//            herbivorePaddock1.
-//            assertEquals("dinosaurs", herbivorePaddock1.paddockDinosaurs());
-//        }
 
 
 
