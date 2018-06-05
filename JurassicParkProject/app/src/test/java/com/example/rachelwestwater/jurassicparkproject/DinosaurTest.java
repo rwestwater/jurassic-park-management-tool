@@ -5,7 +5,6 @@ import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
 import com.example.rachelwestwater.jurassicparkproject.Food.Ferns;
-import com.example.rachelwestwater.jurassicparkproject.Food.Food;
 import com.example.rachelwestwater.jurassicparkproject.Food.FoodType;
 import com.example.rachelwestwater.jurassicparkproject.Food.Meats;
 
@@ -17,6 +16,7 @@ import static org.junit.Assert.assertEquals;
 public class DinosaurTest {
 
     Velociraptor velociraptor;
+    Velociraptor velociraptor2;
     Brontosaurus brontosaurus;
     Ferns ferns;
     Meats meats;
@@ -24,6 +24,7 @@ public class DinosaurTest {
     @Before
     public void before(){
         velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.SLASH, 100);
+        velociraptor2 = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.BITE, 100);
         brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, AttackType.WHIP, 120);
         ferns = new Ferns("Ferns", FoodType.VEGETARIAN);
         meats = new Meats("Lizard", FoodType.MEATS);
@@ -64,13 +65,22 @@ public class DinosaurTest {
     @Test
     public void canTakeDamage(){
         velociraptor.takeDamage(5);
+        brontosaurus.takeDamage(10);
         assertEquals(95, velociraptor.getHealth());
+        assertEquals(110, brontosaurus.getHealth());
     }
 
     @Test
     public void canChangeAttack(){
-        velociraptor.setAttack(AttackType.SLASH);
-        assertEquals(AttackType.SLASH, velociraptor.getAttack());
+        velociraptor.setAttack(AttackType.BITE);
+        assertEquals(AttackType.BITE, velociraptor.getAttack());
+    }
+
+    @Test
+    public void dealDamage(){
+        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.BITE, 100);
+        velociraptor.fight(velociraptor2);
+        assertEquals(90, velociraptor2.getHealth());
     }
 
 

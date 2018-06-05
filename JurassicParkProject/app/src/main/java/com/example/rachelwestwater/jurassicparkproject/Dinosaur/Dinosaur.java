@@ -2,7 +2,7 @@ package com.example.rachelwestwater.jurassicparkproject.Dinosaur;
 
 import java.util.ArrayList;
 
-public abstract class Dinosaur implements IEat {
+public abstract class Dinosaur implements IEat, IFight {
 
     private String name;
     private DinosaurType dinosaurType;
