@@ -59,4 +59,10 @@ public class DinosaurTest {
         assertEquals(100, velociraptor.getHealth());
         assertEquals(120, brontosaurus.getHealth());
     }
+
+    @Test
+    public void canTakeDamage(){
+        velociraptor.takeDamage(20);
+        assertEquals(80, velociraptor.getHealth());
+    }
 }

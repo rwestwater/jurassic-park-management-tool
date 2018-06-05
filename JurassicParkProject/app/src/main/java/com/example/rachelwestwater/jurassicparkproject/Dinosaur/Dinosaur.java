@@ -42,6 +42,11 @@ public abstract class Dinosaur implements IEat {
         return this.health;
     }
 
+    public void takeDamage(int amount) {
+        this.health -= amount;
+    }
+
+
 
 //    public void fight(IFight iFight) {
 //        iFight.takeDamage(this.attack.getValue());
