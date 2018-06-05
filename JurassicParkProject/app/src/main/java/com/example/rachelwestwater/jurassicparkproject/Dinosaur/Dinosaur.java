@@ -1,6 +1,7 @@
 package com.example.rachelwestwater.jurassicparkproject.Dinosaur;
 
 import com.example.rachelwestwater.jurassicparkproject.Food.Food;
+import com.example.rachelwestwater.jurassicparkproject.Paddock.HerbivorePaddock;
 
 import java.util.ArrayList;
 
@@ -32,10 +33,10 @@ public abstract class Dinosaur {
 
     public void eat(Food food) {
         stomachContents.add(food);
-
     }
 
     public ArrayList<Food> getStomachContents() {
         return stomachContents;
     }
+
 }

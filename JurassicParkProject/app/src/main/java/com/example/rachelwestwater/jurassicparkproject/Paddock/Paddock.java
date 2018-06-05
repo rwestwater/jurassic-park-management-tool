@@ -1,5 +1,6 @@
 package com.example.rachelwestwater.jurassicparkproject.Paddock;
 
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Dinosaur;
 
 import java.util.ArrayList;
@@ -32,8 +33,4 @@ public abstract class Paddock {
     public void removeDinosaur(Dinosaur dinosaur) {
         dinosaurs.remove(dinosaur);
     }
-
-
-
-
 }

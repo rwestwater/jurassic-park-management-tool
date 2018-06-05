@@ -10,5 +10,12 @@ public class HerbivorePaddock extends Paddock {
     public void addDinosaur(Brontosaurus brontosaurus) {
         dinosaurs.add(brontosaurus);
     }
+
+    public void transferDinosaur(Brontosaurus brontosaurus, HerbivorePaddock destination) {
+        boolean successful = dinosaurs.remove(brontosaurus);
+        if (successful) {
+            destination.addDinosaur(brontosaurus);
+        }
+    }
 }
 
