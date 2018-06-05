@@ -1,7 +1,6 @@
 package com.example.rachelwestwater.jurassicparkproject;
 
 import com.example.rachelwestwater.jurassicparkproject.Food.Ferns;
-import com.example.rachelwestwater.jurassicparkproject.Food.Food;
 import com.example.rachelwestwater.jurassicparkproject.Food.FoodType;
 
 import org.junit.Before;

@@ -1,6 +1,7 @@
 package com.example.rachelwestwater.jurassicparkproject;
 
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Dinosaur;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
 import com.example.rachelwestwater.jurassicparkproject.Paddock.CarnivorePaddock;
@@ -37,6 +38,20 @@ public class PaddockTest {
             assertEquals("Jungle", carnivorePaddock1.getName());
             assertEquals("Riverland", carnivorePaddock2.getName());
         }
+
+        @Test
+        public void addDinosaurToPaddock(){
+            carnivorePaddock1.addDinosaur(velociraptor);
+            assertEquals(1, carnivorePaddock1.dinosaurCount());
+        }
+
+
+
+//        @Test
+//        public void getPaddockDinosaur(){
+//            herbivorePaddock1.
+//            assertEquals("dinosaurs", herbivorePaddock1.paddockDinosaurs());
+//        }
 
 
 
