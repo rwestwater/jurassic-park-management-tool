@@ -49,6 +49,14 @@ public class DinosaurTest {
     @Test
     public void canCountStomachContents(){
         velociraptor.eat(meats);
+        brontosaurus.eat(ferns);
         assertEquals(1, velociraptor.stomachContentsCount());
+        assertEquals(1, brontosaurus.stomachContentsCount());
     }
+
+//    @Test
+////    public void canGetStomachContentsByItem(){
+////        velociraptor.eat(meats);
+////        assertEquals("Lizard", velociraptor.getStomachContents());
+////    }
 }
