@@ -1,5 +1,6 @@
 package com.example.rachelwestwater.jurassicparkproject;
 
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.AttackType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
@@ -22,8 +23,8 @@ public class DinosaurTest {
 
     @Before
     public void before(){
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, 25, 100);
-        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, 20, 120);
+        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.SLASH, 100);
+        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, AttackType.WHIP, 120);
         ferns = new Ferns("Ferns", FoodType.VEGETARIAN);
         meats = new Meats("Lizard", FoodType.MEATS);
     }
@@ -62,8 +63,14 @@ public class DinosaurTest {
 
     @Test
     public void canTakeDamage(){
-        velociraptor.takeDamage(20);
-        assertEquals(80, velociraptor.getHealth());
+        velociraptor.takeDamage(5);
+        assertEquals(95, velociraptor.getHealth());
+    }
+
+    @Test
+    public void canChangeAttack(){
+        velociraptor.setAttack(AttackType.SLASH);
+        assertEquals(AttackType.SLASH, velociraptor.getAttack());
     }
 
 

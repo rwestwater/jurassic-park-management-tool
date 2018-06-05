@@ -1,5 +1,6 @@
 package com.example.rachelwestwater.jurassicparkproject;
 
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.AttackType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
@@ -26,8 +27,8 @@ public class PaddockTest {
         herbivorePaddock2 = new HerbivorePaddock("Plain Terrain");
         carnivorePaddock1 = new CarnivorePaddock("Jungle");
         carnivorePaddock2 = new CarnivorePaddock("Riverland");
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, 25, 100);
-        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, 20, 120);
+        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.SLASH, 100);
+        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, AttackType.WHIP, 120);
     }
 
     @Test
