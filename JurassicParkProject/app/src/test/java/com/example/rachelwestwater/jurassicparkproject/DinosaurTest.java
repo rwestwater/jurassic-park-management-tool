@@ -65,4 +65,6 @@ public class DinosaurTest {
         velociraptor.takeDamage(20);
         assertEquals(80, velociraptor.getHealth());
     }
+
+
 }

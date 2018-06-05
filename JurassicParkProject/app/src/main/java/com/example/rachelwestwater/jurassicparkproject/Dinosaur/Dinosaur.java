@@ -8,9 +8,9 @@ public abstract class Dinosaur implements IEat {
     private DinosaurType dinosaurType;
     private ArrayList<IEat> stomachContents;
     private int health;
-    private int attack;
+    private AttackType attack;
 
-    public Dinosaur(String name, DinosaurType dinosaurType, int attack, int health) {
+    public Dinosaur(String name, DinosaurType dinosaurType, AttackType attack, int health) {
         this.name = name;
         this.dinosaurType = dinosaurType;
         this.stomachContents = new ArrayList<>();
@@ -46,10 +46,11 @@ public abstract class Dinosaur implements IEat {
         this.health -= amount;
     }
 
+    public void fight(IFight iFight) {
+        iFight.takeDamage(this.attack.getValue());
+    }
 
 
-//    public void fight(IFight iFight) {
-//        iFight.takeDamage(this.attack.getValue());
-//    }
+
 
 }
