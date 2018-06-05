@@ -22,8 +22,8 @@ public class DinosaurTest {
 
     @Before
     public void before(){
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE);
-        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE);
+        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, 25, 100);
+        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, 20, 120);
         ferns = new Ferns("Ferns", FoodType.VEGETARIAN);
         meats = new Meats("Lizard", FoodType.MEATS);
     }
@@ -52,5 +52,11 @@ public class DinosaurTest {
         brontosaurus.eat(ferns);
         assertEquals(1, velociraptor.stomachContentsCount());
         assertEquals(1, brontosaurus.stomachContentsCount());
+    }
+
+    @Test
+    public void canGetHealth(){
+        assertEquals(100, velociraptor.getHealth());
+        assertEquals(120, brontosaurus.getHealth());
     }
 }

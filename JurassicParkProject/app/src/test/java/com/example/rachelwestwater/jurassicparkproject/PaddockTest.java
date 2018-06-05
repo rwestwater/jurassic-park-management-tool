@@ -26,8 +26,8 @@ public class PaddockTest {
         herbivorePaddock2 = new HerbivorePaddock("Plain Terrain");
         carnivorePaddock1 = new CarnivorePaddock("Jungle");
         carnivorePaddock2 = new CarnivorePaddock("Riverland");
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE);
-        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE);
+        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, 25, 100);
+        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, 20, 120);
     }
 
     @Test

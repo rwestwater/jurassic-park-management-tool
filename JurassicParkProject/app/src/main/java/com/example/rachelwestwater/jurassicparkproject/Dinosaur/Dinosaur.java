@@ -1,8 +1,5 @@
 package com.example.rachelwestwater.jurassicparkproject.Dinosaur;
 
-import com.example.rachelwestwater.jurassicparkproject.Food.Food;
-import com.example.rachelwestwater.jurassicparkproject.Paddock.HerbivorePaddock;
-
 import java.util.ArrayList;
 
 public abstract class Dinosaur implements IEat {
@@ -10,14 +7,16 @@ public abstract class Dinosaur implements IEat {
     private String name;
     private DinosaurType dinosaurType;
     private ArrayList<IEat> stomachContents;
+    private int health;
+    private int attack;
 
-
-    public Dinosaur(String name, DinosaurType dinosaurType) {
+    public Dinosaur(String name, DinosaurType dinosaurType, int attack, int health) {
         this.name = name;
         this.dinosaurType = dinosaurType;
         this.stomachContents = new ArrayList<>();
+        this.attack = attack;
+        this.health = health;
     }
-
 
     public String getName() {
         return name;
@@ -38,5 +37,14 @@ public abstract class Dinosaur implements IEat {
     public ArrayList<IEat> getStomachContents() {
         return stomachContents;
     }
+
+    public int getHealth() {
+        return this.health;
+    }
+
+
+//    public void fight(IFight iFight) {
+//        iFight.takeDamage(this.attack.getValue());
+//    }
 
 }
