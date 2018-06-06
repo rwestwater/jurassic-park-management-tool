@@ -19,11 +19,11 @@ public abstract class Dinosaur implements IEat, IFight {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public DinosaurType getDinosaurType() {
-        return dinosaurType;
+        return this.dinosaurType;
     }
 
     public int stomachContentsCount() {
@@ -35,7 +35,7 @@ public abstract class Dinosaur implements IEat, IFight {
     }
 
     public ArrayList<IEat> getStomachContents() {
-        return stomachContents;
+        return this.stomachContents;
     }
 
     public int getHealth() {
@@ -57,8 +57,5 @@ public abstract class Dinosaur implements IEat, IFight {
     public void fight(IFight iFight) {
         iFight.takeDamage(this.attack.getValue());
     }
-
-
-
 
 }

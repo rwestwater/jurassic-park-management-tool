@@ -1,6 +1,5 @@
 package com.example.rachelwestwater.jurassicparkproject.Paddock;
 
-import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Dinosaur;
 
 import java.util.ArrayList;
