@@ -16,8 +16,9 @@ public abstract class Visitor implements IFight {
         return this.name;
     }
 
-    public int getHealth() {
+    public int getHealth(){
         return this.health;
+
     }
 
 }

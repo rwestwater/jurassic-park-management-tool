@@ -23,9 +23,9 @@ public class DinosaurTest {
 
     @Before
     public void before(){
-        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.SLASH, 100);
-        velociraptor2 = new Velociraptor("Harold", DinosaurType.CARNIVORE, AttackType.BITE, 100);
-        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, AttackType.WHIP, 120);
+        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.SLASH, 100, velociraptor, brontosaurus);
+        velociraptor2 = new Velociraptor("Harold", DinosaurType.CARNIVORE, AttackType.BITE, 100, velociraptor, brontosaurus);
+        brontosaurus = new Brontosaurus("Little Foot", DinosaurType.HERBIVORE, AttackType.WHIP, 120, velociraptor, brontosaurus);
         ferns = new Ferns("Ferns", FoodType.VEGETARIAN);
         meats = new Meats("Lizard", FoodType.MEATS);
     }
@@ -33,7 +33,7 @@ public class DinosaurTest {
     @Test
     public void canGetName(){
         assertEquals("Barney", velociraptor.getName());
-        assertEquals("Brontosaurus", brontosaurus.getName());
+        assertEquals("Little Foot", brontosaurus.getName());
     }
 
     @Test
@@ -78,9 +78,15 @@ public class DinosaurTest {
 
     @Test
     public void canFight(){
-        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.BITE, 100);
+        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.BITE, 100, velociraptor, brontosaurus);
         velociraptor.fight(velociraptor2);
-        assertEquals(90, velociraptor2.getHealth());
+        assertEquals(50, velociraptor2.getHealth());
+    }
+
+    @Test
+    public void canFightToDeath(){
+        brontosaurus.fightToTheDeath(velociraptor, brontosaurus);
+        assertEquals(0, velociraptor.getHealth());
     }
 
 

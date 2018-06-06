@@ -29,8 +29,8 @@ public class JurassicParkTest {
     @Before
     public void before(){
         jurassicPark = new JurassicPark(velociraptor, brontosaurus);
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.SLASH, 100);
-        brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, AttackType.WHIP, 120);
+        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.SLASH, 100, velociraptor, brontosaurus);
+        brontosaurus = new Brontosaurus("Little Foot", DinosaurType.HERBIVORE, AttackType.WHIP, 120, velociraptor, brontosaurus);
         rachel = new Rachel("Rachel", 20);
         luis = new Luis("Luis", 20);
         ruri = new Ruri("Ruri", 20);

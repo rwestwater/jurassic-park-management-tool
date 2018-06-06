@@ -1,6 +1,7 @@
 package com.example.rachelwestwater.jurassicparkproject;
 
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.AttackType;
+import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Brontosaurus;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.DinosaurType;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.Velociraptor;
 import com.example.rachelwestwater.jurassicparkproject.Visitors.Luis;
@@ -18,14 +19,15 @@ public class VisitorTest {
     Luis luis;
     Ruri ruri;
     Velociraptor velociraptor;
+    Brontosaurus brontosaurus;
 
 
     @Before
     public void before(){
-        rachel = new Rachel ("Rachel", 20);
-        luis = new Luis ("Luis", 20);
-        ruri = new Ruri ("Ruri", 20);
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.BITE, 100);
+        rachel = new Rachel ("Rachel", 50);
+        luis = new Luis ("Luis", 50);
+        ruri = new Ruri ("Ruri", 50);
+        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.BITE, 100, velociraptor, brontosaurus);
 
     }
 
@@ -38,15 +40,15 @@ public class VisitorTest {
 
     @Test
     public void canGetHealth(){
-        assertEquals(20, rachel.getHealth());
-        assertEquals(20, luis.getHealth());
-        assertEquals(20, ruri.getHealth());
+        assertEquals(50, rachel.getHealth());
+        assertEquals(50, luis.getHealth());
+        assertEquals(50, ruri.getHealth());
     }
 
     @Test
     public void canTakeDamage(){
-        rachel.takeDamage(10);
-        assertEquals(10, rachel.getHealth());
+        rachel.takeDamage(50);
+        assertEquals(0, rachel.getHealth());
     }
 
     @Test
@@ -54,7 +56,7 @@ public class VisitorTest {
         velociraptor.fight(rachel);
         velociraptor.fight(luis);
         velociraptor.fight(ruri);
-        assertEquals(10, rachel.getHealth());
+        assertEquals(0, rachel.getHealth());
     }
 
 }
