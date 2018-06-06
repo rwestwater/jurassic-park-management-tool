@@ -56,6 +56,7 @@ public abstract class Dinosaur implements IEat, IFight {
 
     public void fight(IFight iFight) {
         iFight.takeDamage(this.attack.getValue());
+        System.out.println(this.name + " has attacked " + iFight.getName() + " doing " + this.attack.getValue() + " Damage");
     }
 
 }

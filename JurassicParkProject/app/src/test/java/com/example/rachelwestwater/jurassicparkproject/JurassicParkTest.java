@@ -41,6 +41,14 @@ public class JurassicParkTest {
         assertEquals(0, jurassicPark.visitorListCount());
     }
 
+    @Test
+    public void evacuatePark() {
+        jurassicPark.addVisitor(rachel);
+        jurassicPark.addVisitor(luis);
+        jurassicPark.evacuatePark();
+        assertEquals(0, jurassicPark.visitorListCount());
+    }
+
 
 
 
