@@ -1,9 +1,8 @@
 package com.example.rachelwestwater.jurassicparkproject.Visitors;
 
-import com.example.rachelwestwater.jurassicparkproject.Dinosaur.IEat;
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.IFight;
 
-public abstract class Visitor implements IEat, IFight {
+public abstract class Visitor implements IFight {
 
     private String name;
     private int health;
