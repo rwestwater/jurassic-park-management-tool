@@ -38,15 +38,15 @@ public class VisitorTest {
 
     @Test
     public void canGetHealth(){
-        assertEquals(100, rachel.getHealth());
-        assertEquals(100, luis.getHealth());
-        assertEquals(100, ruri.getHealth());
+        assertEquals(20, rachel.getHealth());
+        assertEquals(20, luis.getHealth());
+        assertEquals(20, ruri.getHealth());
     }
 
     @Test
     public void canTakeDamage(){
-        rachel.takeDamage(50);
-        assertEquals(50, rachel.getHealth());
+        rachel.takeDamage(10);
+        assertEquals(10, rachel.getHealth());
     }
 
     @Test

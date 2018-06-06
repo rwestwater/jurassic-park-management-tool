@@ -22,16 +22,16 @@ public class JurassicPark {
     }
 
     public int visitorListCount() {
-        return visitorList.size();
+        return this.visitorList.size();
     }
 
-    public void guestEvacuation() {
-        visitorList.clear();
-    }
-
-    public String guestEvacuationNotice() {
-        return "PARK EVACUATION, ALL GUESTS MAKE YOUR WAY TO THE NEAREST EXIT";
-    }
+//    public void guestEvacuation() {
+//        this.visitorList.clear();
+//    }
+//
+//    public String guestEvacuationNotice() {
+//        return "PARK EVACUATION, ALL GUESTS MAKE YOUR WAY TO THE NEAREST EXIT";
+//    }
 
 
 
