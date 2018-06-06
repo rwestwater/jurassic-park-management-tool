@@ -42,20 +42,16 @@ public class JurassicParkTest {
     }
 
     @Test
-    public void evacuatePark() {
+    public void canCountVisitorList() {
         jurassicPark.addVisitor(rachel);
         jurassicPark.addVisitor(luis);
-        jurassicPark.evacuatePark();
-        assertEquals(0, jurassicPark.visitorListCount());
+        jurassicPark.addVisitor(ruri);
+        assertEquals(3, jurassicPark.visitorListCount());
     }
 
-
-
-
-
-
-
-
-
-
+    @Test
+    public void dinosaurRampage() {
+        jurassicPark.dinosaurRampage(velociraptor);
+        assertEquals(0, jurassicPark.visitorListCount());
+    }
 }

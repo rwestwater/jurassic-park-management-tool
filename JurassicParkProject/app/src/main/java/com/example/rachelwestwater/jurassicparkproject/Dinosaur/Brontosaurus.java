@@ -7,6 +7,5 @@ public class Brontosaurus extends Dinosaur implements IFight {
 
     @Override
     public void attack(IFight iFight) {
-
     }
 }

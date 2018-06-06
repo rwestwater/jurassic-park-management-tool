@@ -8,7 +8,7 @@ public abstract class Dinosaur implements IEat, IFight {
     private DinosaurType dinosaurType;
     private ArrayList<IEat> stomachContents;
     private int health;
-    private AttackType attack;
+    protected AttackType attack;
 
     public Dinosaur(String name, DinosaurType dinosaurType, AttackType attack, int health) {
         this.name = name;

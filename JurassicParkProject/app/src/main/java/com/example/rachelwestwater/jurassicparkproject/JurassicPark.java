@@ -22,24 +22,36 @@ public class JurassicPark {
         return this.visitorList;
     }
 
-    public int visitorListCount() {
-        return this.visitorList.size();
-    }
-
-    public void guestEvacuation() {
-        this.visitorList.clear();
-    }
-
-    public String guestEvacuationNotice() {
-        return "PARK EVACUATION, ALL GUESTS MAKE YOUR WAY TO THE NEAREST EXIT";
-    }
-
-
     public void addVisitor(Visitor visitor) {
         visitorList.add(visitor);
     }
 
-    public void evacuatePark() {
-        visitorList.clear();
+    public int visitorListCount() {
+        return this.visitorList.size();
+    }
+
+    public boolean visitorsAlive(){
+        int survivors = 0;
+        for (Visitor visitor : visitorList){
+            if ( visitor.getHealth() > 0){
+                survivors ++;
+            }
+        } if (survivors <= 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public String dinosaurRampage(Velociraptor velociraptor) {
+        System.out.println("A rampage has begun");
+        while (visitorsAlive()){
+            for(int i = 0; i < visitorList().size(); i++){
+                velociraptor.attack(visitorList().get(i));
+                brontosaurus.attack(visitorList().get(i));
+                }
+        }
+        System.out.println("All visitors have been eaten by " + velociraptor.getName());
+        return "No survivors";
     }
 }

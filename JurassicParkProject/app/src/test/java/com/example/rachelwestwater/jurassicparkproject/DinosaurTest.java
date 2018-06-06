@@ -23,8 +23,8 @@ public class DinosaurTest {
 
     @Before
     public void before(){
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.SLASH, 100);
-        velociraptor2 = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.BITE, 100);
+        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.SLASH, 100);
+        velociraptor2 = new Velociraptor("Harold", DinosaurType.CARNIVORE, AttackType.BITE, 100);
         brontosaurus = new Brontosaurus("Brontosaurus", DinosaurType.HERBIVORE, AttackType.WHIP, 120);
         ferns = new Ferns("Ferns", FoodType.VEGETARIAN);
         meats = new Meats("Lizard", FoodType.MEATS);
@@ -32,7 +32,7 @@ public class DinosaurTest {
 
     @Test
     public void canGetName(){
-        assertEquals("Velociraptor", velociraptor.getName());
+        assertEquals("Barney", velociraptor.getName());
         assertEquals("Brontosaurus", brontosaurus.getName());
     }
 
@@ -78,7 +78,7 @@ public class DinosaurTest {
 
     @Test
     public void canFight(){
-        velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.BITE, 100);
+        velociraptor = new Velociraptor("Barney", DinosaurType.CARNIVORE, AttackType.BITE, 100);
         velociraptor.fight(velociraptor2);
         assertEquals(90, velociraptor2.getHealth());
     }

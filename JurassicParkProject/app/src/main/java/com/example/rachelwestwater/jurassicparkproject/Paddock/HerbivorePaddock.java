@@ -16,6 +16,8 @@ public class HerbivorePaddock extends Paddock {
         if (successful) {
             destination.addDinosaur(brontosaurus);
         }
+        System.out.println(brontosaurus.getName() + " has been moved from " + getName() + " to " + destination.getName());
+
     }
 }
 
