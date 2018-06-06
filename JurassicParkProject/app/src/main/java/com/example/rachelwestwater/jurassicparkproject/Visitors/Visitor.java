@@ -5,7 +5,7 @@ import com.example.rachelwestwater.jurassicparkproject.Dinosaur.IFight;
 public abstract class Visitor implements IFight {
 
     private String name;
-    private int health;
+    protected int health;
 
     public Visitor(String name, int health) {
         this.name = name;
@@ -19,4 +19,5 @@ public abstract class Visitor implements IFight {
     public int getHealth() {
         return this.health;
     }
+
 }

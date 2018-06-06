@@ -30,4 +30,18 @@ public class VisitorTest {
         assertEquals("Luis", luis.getName());
         assertEquals("Ruri", ruri.getName());
     }
+
+    @Test
+    public void canGetHealth(){
+        assertEquals(100, rachel.getHealth());
+        assertEquals(100, luis.getHealth());
+        assertEquals(100, ruri.getHealth());
+    }
+
+    @Test
+    public void canTakeDamage(){
+        rachel.takeDamage(50);
+        assertEquals(50, rachel.getHealth());
+    }
+
 }

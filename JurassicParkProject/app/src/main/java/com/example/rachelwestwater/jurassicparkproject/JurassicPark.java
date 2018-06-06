@@ -9,14 +9,27 @@ public class JurassicPark {
 
     private Velociraptor velociraptor;
     private Brontosaurus brontosaurus;
-    private ArrayList<Visitor> visitorArrayList;
+    protected ArrayList<Visitor> visitorList;
 
     public JurassicPark(Velociraptor velociraptor, Brontosaurus brontosaurus){
+        this.visitorList = new ArrayList<>();
         this.velociraptor = velociraptor;
         this.brontosaurus = brontosaurus;
     }
 
-    public String guestEvacuation() {
+    public ArrayList<Visitor> visitorList() {
+        return this.visitorList;
+    }
+
+    public int visitorListCount() {
+        return visitorList.size();
+    }
+
+    public void guestEvacuation() {
+        visitorList.clear();
+    }
+
+    public String guestEvacuationNotice() {
         return "PARK EVACUATION, ALL GUESTS MAKE YOUR WAY TO THE NEAREST EXIT";
     }
 

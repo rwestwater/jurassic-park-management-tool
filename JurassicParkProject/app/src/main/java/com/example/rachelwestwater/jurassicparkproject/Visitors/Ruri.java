@@ -2,7 +2,7 @@ package com.example.rachelwestwater.jurassicparkproject.Visitors;
 
 import com.example.rachelwestwater.jurassicparkproject.Dinosaur.IFight;
 
-public class Ruri extends Visitor {
+public class Ruri extends Visitor implements IFight {
 
     public Ruri(String name, int health) {
         super(name, health);
@@ -15,6 +15,6 @@ public class Ruri extends Visitor {
 
     @Override
     public void takeDamage(int amount) {
-
+        this.health -= amount;
     }
 }
