@@ -77,7 +77,7 @@ public class DinosaurTest {
     }
 
     @Test
-    public void dealDamage(){
+    public void canFight(){
         velociraptor = new Velociraptor("Velociraptor", DinosaurType.CARNIVORE, AttackType.BITE, 100);
         velociraptor.fight(velociraptor2);
         assertEquals(90, velociraptor2.getHealth());
