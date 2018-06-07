@@ -48,7 +48,6 @@ public class JurassicPark {
         while (visitorsAlive()){
             for(int i = 0; i < visitorList().size(); i++){
                 velociraptor.attack(visitorList().get(i));
-                brontosaurus.attack(visitorList().get(i));
                 }
         }
         System.out.println("All visitors have been eaten by " + velociraptor.getName());

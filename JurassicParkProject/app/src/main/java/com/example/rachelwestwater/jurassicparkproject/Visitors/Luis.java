@@ -13,7 +13,6 @@ public class Luis extends Visitor implements IFight{
     }
 
     @Override
-    public void takeDamage(int amount) {
-
+    public void takeDamage(int amount) { this.health -= amount;
     }
 }
