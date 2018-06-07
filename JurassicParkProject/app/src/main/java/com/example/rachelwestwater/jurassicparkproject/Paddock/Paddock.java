@@ -17,10 +17,6 @@ public abstract class Paddock {
         return name;
     }
 
-    public ArrayList<Dinosaur> paddockDinosaurs() {
-        return dinosaurs;
-    }
-
     public int dinosaurCount() {
         return dinosaurs.size();
     }

@@ -34,9 +34,7 @@ public abstract class Dinosaur implements IEat, IFight {
         return this.stomachContents.size();
     }
 
-    public void eat(IEat iEat) {
-        stomachContents.add(iEat);
-    }
+    public void eat(IEat iEat) {stomachContents.add(iEat);}
 
     public int getHealth() {
         return this.health;
